@@ -2,10 +2,10 @@
 """
 Created on Mon Jan 28 12:13:26 2019
 
-@author: CPDS 6
+@author: freakatom7
 """
 # import libraries
-#urllib is used to open urls
+# urllib is used to open urls
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -14,7 +14,7 @@ import seaborn as sns
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
-#to easily display the plots
+#to display the plotted chart between the code 
 %matplotlib inline
 
 # specify url containing the datasets
@@ -82,8 +82,8 @@ type(clean2)
 df = pd.DataFrame(list_rows)
 df.head(10)
 
-#the elements in the rows are still in unwanted format
-#split 0 column into multiple columns at , position
+# the elements in the rows are still in unwanted format
+# split 0 column into multiple columns at , position
 df1 = df[0].str.split(',', expand=True)
 df1.head(10)
 
